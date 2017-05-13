@@ -4,8 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using BookingApi.Dtos;
 using BookingApi.Models;
+using BookingApi.Models.Domain;
+using BookingApi.Models.Dtos;
+using BookingApi.Models.Services;
 
 namespace BookingApi.Controllers
 {

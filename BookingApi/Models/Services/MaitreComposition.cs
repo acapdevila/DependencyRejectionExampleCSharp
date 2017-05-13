@@ -1,18 +1,20 @@
 using System.Linq;
+using BookingApi.Models.Data;
+using BookingApi.Models.Domain;
 
-namespace BookingApi.Models
+namespace BookingApi.Models.Services
 {
     public interface IMaitre
     {
         int? TryAccept(Reservation reservation);
     }
 
-    public class Maitre : IMaitre
+    public class MaitreComposition : IMaitre
     {
         private readonly int _capacity;
         private readonly IReservartionRepository _reservationsRepository;
 
-        public Maitre(int capacity, IReservartionRepository reservationsRepository)
+        public MaitreComposition(int capacity, IReservartionRepository reservationsRepository)
         {
             _capacity = capacity;
             _reservationsRepository = reservationsRepository;

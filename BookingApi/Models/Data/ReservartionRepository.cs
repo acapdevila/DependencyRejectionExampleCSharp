@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using BookingApi.Models.Domain;
 
-namespace BookingApi.Models
+namespace BookingApi.Models.Data
 {
     public interface IReservartionRepository
     {

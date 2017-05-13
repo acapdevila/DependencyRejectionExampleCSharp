@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BookingApi.Models
+namespace BookingApi.Models.Domain
 {
     public class Reservation
     {

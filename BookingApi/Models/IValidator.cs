@@ -1,4 +1,4 @@
-using BookingApi.Dtos;
+using BookingApi.Models.Dtos;
 
 namespace BookingApi.Models
 {

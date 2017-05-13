@@ -112,16 +112,15 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Models\IMapper.cs" />
     <Compile Include="Controllers\ReservationsController.cs" />
-    <Compile Include="Models\ReservartionRepository.cs" />
+    <Compile Include="Models\Data\ReservartionRepository.cs" />
     <Compile Include="Models\IValidator.cs" />
-    <Compile Include="Dtos\ReservationRequestDto.cs" />
+    <Compile Include="Models\Dtos\ReservationRequestDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Maitre.cs" />
-    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Services\MaitreComposition.cs" />
+    <Compile Include="Models\Domain\Reservation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

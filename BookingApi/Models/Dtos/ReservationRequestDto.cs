@@ -1,5 +1,6 @@
 ﻿using System;
-namespace BookingApi.Dtos
+
+namespace BookingApi.Models.Dtos
 {
     public class ReservationRequestDto
     {
