@@ -12,13 +12,11 @@ namespace BookingApi.Controllers
     public class ReservationsController : ApiController
     {
         private readonly IValidator _validator;
-        private readonly IMapper _mapper;
         private readonly IMaitre _maîtreD;
 
-        public ReservationsController(IValidator validator, IMapper mapper, IMaitre maîtreD)
+        public ReservationsController(IValidator validator, IMaitre maîtreD)
         {
             _validator = validator;
-            _mapper = mapper;
             _maîtreD = maîtreD;
         }
 
@@ -28,7 +26,7 @@ namespace BookingApi.Controllers
             if (validationMsg != "")
                 return this.BadRequest(validationMsg);
 
-            var r = _mapper.Map(dto);
+            var r = new Reservation(dto.Date, dto.Name, dto.Email, dto.Quantity);
             var id = _maîtreD.TryAccept(r);
             if (id == null)
                 return this.StatusCode(HttpStatusCode.Forbidden);

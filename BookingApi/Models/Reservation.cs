@@ -6,6 +6,8 @@ namespace BookingApi.Models
     {
         public Reservation(DateTime date, string name, string email, int quantity)
         {
+            // Validate inputs and throw exception if are not valid
+
             Date = date;
             Name = name;
             Email = email;
