@@ -34,7 +34,7 @@ namespace BookingApi.Models.Services
 
             // Non pure
             if(resultReservation.HasValue)
-                return _reservationsRepository.Create(reservation);
+                return _reservationsRepository.Create(resultReservation.Value);
 
             return null;
         }
